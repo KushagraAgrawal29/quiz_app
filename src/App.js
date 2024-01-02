@@ -1,10 +1,17 @@
+import { useState } from 'react';
 import './App.css';
+import Layout from './components/Layout';
+import Loader from './components/Loader';
 
 function App() {
+  const [loading,setLoading] = useState(false);
+  const [loadingMessage,setLoadingMessage] = useState(null);
+
+
   return (
-    <div className='flex items-center justify-center text-4xl text-red-600'>
-      Hello
-    </div>
+    <Layout>
+      {loading && <Loader {...loadingMessage}/>}
+    </Layout>
   );
 }
 
