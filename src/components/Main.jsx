@@ -15,6 +15,7 @@ import DIFFICULTY from "./constants/difficulty";
 import QUESTIONS_TYPE from "./constants/questionsType";
 import COUNTDOWN_TIME from "./constants/countdownTime";
 import shuffle from "./utils/shuffle";
+import Offline from "./Offline";
 
 const Main = ({ startQuiz }) => {
   const [error, setError] = useState(null);
@@ -105,6 +106,10 @@ const Main = ({ startQuiz }) => {
         },1000)
       );
   };
+
+  if(offline){
+    return <Offline/>
+  }
 
   return (
     <Container>
