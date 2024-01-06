@@ -13,7 +13,8 @@ import {
 } from "semantic-ui-react";
 import Countdown from "../Countdown";
 import he from "he";
-import { getLetter } from "../utils/getLetter";
+import getLetter from "../utils/getLetter"
+
 
 const Quiz = ({ data, countdownTime, endQuiz }) => {
   const [questionIndex, setQuestionIndex] = useState(0);

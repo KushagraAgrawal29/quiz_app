@@ -14,7 +14,7 @@ import NUM_OF_QUESTIONS from "./constants/numOfQuestions";
 import DIFFICULTY from "./constants/difficulty";
 import QUESTIONS_TYPE from "./constants/questionsType";
 import COUNTDOWN_TIME from "./constants/countdownTime";
-import shuffle from "./utils";
+import shuffle from "./utils/shuffle";
 import Offline from "./Offline";
 
 const Main = ({ startQuiz }) => {

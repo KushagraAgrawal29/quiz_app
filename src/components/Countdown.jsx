@@ -1,10 +1,16 @@
 import React from 'react'
+import { Button, Popup } from 'semantic-ui-react'
+
 
 const Countdown = () => {
   return (
-    <div>
-      Countdown
-    </div>
+    <Button.Group>
+      {/* <Popup
+        content="hours"
+        trigger={<Button active>{hours}</Button>}
+        position='bottom left'
+      /> */}
+    </Button.Group>
   )
 }
 

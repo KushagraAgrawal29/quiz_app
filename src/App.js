@@ -5,7 +5,7 @@ import Loader from './components/Loader';
 import Main from './components/Main';
 import Quiz from './components/Quiz/Quiz';
 import Result from './components/Result/Result';
-import shuffle from './components/utils';
+import shuffle from './components/utils/shuffle';
 
 function App() {
   const [loading,setLoading] = useState(false);

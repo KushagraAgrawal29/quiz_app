@@ -1,18 +1,18 @@
-const getLetter = (number) => {
+const getLetter = number => {
   let letter;
 
   switch (number) {
     case 0:
-      letter = "A.";
+      letter = 'A.';
       break;
     case 1:
-      letter = "B.";
+      letter = 'B.';
       break;
     case 2:
-      letter = "C.";
+      letter = 'C.';
       break;
     case 3:
-      letter = "D.";
+      letter = 'D.';
       break;
     default:
       letter = null;
