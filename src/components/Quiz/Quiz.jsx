@@ -15,12 +15,11 @@ import Countdown from "../Countdown";
 import he from "he";
 import getLetter from "../utils/getLetter"
 
-
 const Quiz = ({ data, countdownTime, endQuiz }) => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [timeTaken, setTimeTaken] = useState(null);
   const [userSelectedAns, setUserSelectedAns] = useState(null);
-  const [correctAnswers, setCorrectedAnswers] = useState(0);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
   const [questionsAndAnswers, setQuestionsAndAnswers] = useState([]);
 
   useEffect(() => {
@@ -35,8 +34,7 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
 
   const handleNext = () => {
     let point = 0;
-
-    if (userSelectedAns === he.decode([questionIndex].correct_answer)) {
+    if (userSelectedAns === he.decode(data[questionIndex].correct_answer)) {
       point = 1;
     }
 
@@ -57,7 +55,7 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
       });
     }
 
-    setCorrectedAnswers(correctAnswers + point);
+    setCorrectAnswers(correctAnswers + point);
     setQuestionIndex(questionIndex + 1);
     setUserSelectedAns(null);
     setQuestionsAndAnswers(qna);
@@ -130,6 +128,7 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
                     floated="right"
                     size="big"
                     icon="right chevron"
+                    labelPosition="right"
                     disabled={!userSelectedAns}
                   />
                 </Item.Extra>

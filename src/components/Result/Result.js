@@ -20,7 +20,7 @@ const Result = ({
 
     return (
       <Container>
-        <Menu>
+        <Menu fluid widths={2}>
           <Menu.Item
             name="Stats"
             active={activeTab === "Stats"}
@@ -41,7 +41,7 @@ const Result = ({
             resetQuiz={resetQuiz}
           />
         )}
-        {activeTab === "ONA" && (
+        {activeTab === "QNA" && (
           <QNA questionsAndAnswers={questionsAndAnswers} />
         )}
         <br />
